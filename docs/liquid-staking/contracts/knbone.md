@@ -12,45 +12,45 @@ knBONE  is inherited from IKnBONE, ERC20Upgradeable, AccessControlUpgradeable, P
 
 ## Variables
 
-<mark style="color:orange;">`IERC20Upgradeable public token;`</mark> - BONE token address\
-\
-<mark style="color:orange;">`INodeOperatorRegistry public nodeOperatorRegistry;`</mark> - NodeOpeartorRegistry contract address\
-\
-<mark style="color:orange;">`IStakeManager public stakeManager;`</mark> - Shibarium StakeManager contract address\
-<mark style="color:orange;">`IUnstBONE public unstBONE;`</mark> - UnstBONE contract address\
-\
-<mark style="color:orange;">`IInstantPool public instantPool;`</mark> - InstantPool contract address\
-\
-<mark style="color:orange;">`IDepositManager public depositManager;`</mark> - DepositManager address of the bridge in Shibarium (this bridge is owned by K9 Finance DAO)\
-\
-<mark style="color:orange;">`IBridge public bridge;`</mark> - Bridge contract address in Ethereum\
-\
-<mark style="color:orange;">`address public l2Staking;`</mark> - Real Yield Staking contract address that will receive a share of rewards from Liquid Staking\
-\
-<mark style="color:orange;">`address public dao;`</mark> - DAO Treasury reward address (this address does not necessarily have a DAO role) that will receive a share of rewards from Liquid Staking\
-\
-<mark style="color:orange;">`FeeDistribution public entityFees;`</mark> - Protocol fee distribution structure\
-\
-<mark style="color:orange;">`uint256 public instantPoolUsageFee;`</mark> - Fee percentage that user pays when withdrawing instant reward\
-\
-<mark style="color:orange;">`uint256 public totalBuffered;`</mark> - amount of BONE that is buffered but not delegated, includes reservedFunds\
-\
-<mark style="color:orange;">`uint256 public delegationLowerBound;`</mark> - the minimum required for successful delegate() on this contract\
-\
-<mark style="color:orange;">`uint256 public rewardDistributionLowerBound;`</mark> - the minimum reward amount that is required for successful distributeRewards() on this contract\
-\
-<mark style="color:orange;">`uint256 public reservedFunds;`</mark> - replenished if, when creating a request from a user, some amount did not fit into our requests to validators (included in totalBuffered)\
-\
-<mark style="color:orange;">`bytes32 public constant DAO_ROLE = keccak256("DAO_ROLE");`</mark> - dao role identifier\
-<mark style="color:orange;">`bytes32 public constant PAUSE_ROLE = keccak256("PAUSE_ROLE");`</mark> - pauser role identifier\
-<mark style="color:orange;">`bytes32 public constant UNPAUSE_ROLE = keccak256("UNPAUSE_ROLE");`</mark> - unpauser role identifier\
-\
-<mark style="color:orange;">`bytes32 public constant BRIDGE_ROLE = keccak256("BRIDGE_ROLE");`</mark> - bridge executor role identifier (should be granted to bridge)\
-\
-<mark style="color:orange;">`RequestWithdraw[] public knBONEWithdrawRequest;`</mark> - an array of withdrawal request structures specifically for withdrawal to this contract (will be filled in only when creating a withdrawal request from the validator to KnBONE for reasons other than the user’s withdrawal, filled in when rebalanceDelegatedTokens() and withdrawTotalDelegated())\
-\
-<mark style="color:orange;">`mapping(uint256 => RequestWithdraw[]) public token2WithdrawRequests;`</mark> - for each unstBONE tokenID returns an array of withdrawal request structures\
-\
+<mark style="color:orange;">`IERC20Upgradeable public token;`</mark> - BONE token address
+
+<mark style="color:orange;">`INodeOperatorRegistry public nodeOperatorRegistry;`</mark> - NodeOpeartorRegistry contract address
+
+<mark style="color:orange;">`IStakeManager public stakeManager;`</mark> - Shibarium StakeManager contract address
+<mark style="color:orange;">`IUnstBONE public unstBONE;`</mark> - UnstBONE contract address
+
+<mark style="color:orange;">`IInstantPool public instantPool;`</mark> - InstantPool contract address
+
+<mark style="color:orange;">`IDepositManager public depositManager;`</mark> - DepositManager address of the bridge in Shibarium (this bridge is owned by K9 Finance DAO)
+
+<mark style="color:orange;">`IBridge public bridge;`</mark> - Bridge contract address in Ethereum
+
+<mark style="color:orange;">`address public l2Staking;`</mark> - Real Yield Staking contract address that will receive a share of rewards from Liquid Staking
+
+<mark style="color:orange;">`address public dao;`</mark> - DAO Treasury reward address (this address does not necessarily have a DAO role) that will receive a share of rewards from Liquid Staking
+
+<mark style="color:orange;">`FeeDistribution public entityFees;`</mark> - Protocol fee distribution structure
+
+<mark style="color:orange;">`uint256 public instantPoolUsageFee;`</mark> - Fee percentage that user pays when withdrawing instant reward
+
+<mark style="color:orange;">`uint256 public totalBuffered;`</mark> - amount of BONE that is buffered but not delegated, includes reservedFunds
+
+<mark style="color:orange;">`uint256 public delegationLowerBound;`</mark> - the minimum required for successful delegate() on this contract
+
+<mark style="color:orange;">`uint256 public rewardDistributionLowerBound;`</mark> - the minimum reward amount that is required for successful distributeRewards() on this contract
+
+<mark style="color:orange;">`uint256 public reservedFunds;`</mark> - replenished if, when creating a request from a user, some amount did not fit into our requests to validators (included in totalBuffered)
+
+<mark style="color:orange;">`bytes32 public constant DAO_ROLE = keccak256("DAO_ROLE");`</mark> - dao role identifier
+<mark style="color:orange;">`bytes32 public constant PAUSE_ROLE = keccak256("PAUSE_ROLE");`</mark> - pauser role identifier
+<mark style="color:orange;">`bytes32 public constant UNPAUSE_ROLE = keccak256("UNPAUSE_ROLE");`</mark> - unpauser role identifier
+
+<mark style="color:orange;">`bytes32 public constant BRIDGE_ROLE = keccak256("BRIDGE_ROLE");`</mark> - bridge executor role identifier (should be granted to bridge)
+
+<mark style="color:orange;">`RequestWithdraw[] public knBONEWithdrawRequest;`</mark> - an array of withdrawal request structures specifically for withdrawal to this contract (will be filled in only when creating a withdrawal request from the validator to KnBONE for reasons other than the user’s withdrawal, filled in when rebalanceDelegatedTokens() and withdrawTotalDelegated())
+
+<mark style="color:orange;">`mapping(uint256 => RequestWithdraw[]) public token2WithdrawRequests;`</mark> - for each unstBONE tokenID returns an array of withdrawal request structures
+
 <mark style="color:orange;">`uint8 public protocolFee;`</mark> - Protocol fee total percentage which will then be distributed in accordance with entityFees
 
 ## Structures
@@ -60,7 +60,6 @@ knBONE  is inherited from IKnBONE, ERC20Upgradeable, AccessControlUpgradeable, P
 Withdrawal requests structure
 
 <table><thead><tr><th width="297">Name</th><th>Description</th></tr></thead><tbody><tr><td>uint256 amount2WithdrawFromKnBONE</td><td>BONE amount to withdraw</td></tr><tr><td>uint256 validatorNonce</td><td>filled in as <em>ValidatorShare.unboundNonces(address(this))</em> or 0 if the sub-application amount did not fit into our requests to validators</td></tr><tr><td>uint256 requestEpoch</td><td>when withdrawal is available, filled in as <em>StakeManager.epoch() + StakeManager.withdrawalDelay()</em></td></tr><tr><td>address validatorAddress</td><td>ValidatorShare address or zero address in case if the sub-request amount does not fit into our requests to validators</td></tr></tbody></table>
-
 
 
 ```
@@ -99,7 +98,8 @@ uint8 staking;
 
 <mark style="color:orange;">`event DistributeRewardsEvent(uint256 indexed _amount, uint256 indexed totalPooledBefore, uint256 indexed totalPooledAfter);`</mark> - upon distribureRewards() call
 
-<mark style="color:orange;">`event WithdrawTotalDelegatedEvent(`</mark> \ <mark style="color:orange;">`address indexed _from, uint256 indexed _amount );`</mark> - upon withdrawTotalDelegated() call
+<mark style="color:orange;">`event WithdrawTotalDelegatedEvent(`</mark> 
+<mark style="color:orange;">`address indexed _from, uint256 indexed _amount );`</mark> - upon withdrawTotalDelegated() call
 
 <mark style="color:orange;">`event DelegateEvent(uint256 indexed _amountDelegated, uint256 indexed _remainder );`</mark> - upon delegate() call
 
@@ -223,10 +223,10 @@ Returns the BONE amount staked in all validators.
 function getTotalPooledBONE() public view returns (uint256)
 ```
 
-Returns total pooled BONE as\
-&#xNAN;_&#x67;etTotalStakeAcrossAllValidators() +_ \
-_totalBuffered +_ \
-_calculatePendingBufferedTokens() -_ \
+Returns total pooled BONE as
+_&#x67;etTotalStakeAcrossAllValidators() +_ 
+_totalBuffered +_ 
+_calculatePendingBufferedTokens() -_ 
 _reservedFunds_
 
 ### getToken2WithdrawRequests
@@ -313,11 +313,12 @@ function submit(uint256 _amount, address _receiver, bool _transferToL2)
 
 Send funds to knBONE contract and mint knBONE to receiver. Requires that msg.sender has approved \_amount of BONE to this contract.
 
-{% hint style="info" %}
-* \_amount - Amount of BONE sent from msg.sender to this contract&#x20;
-* \_receiver - receiver address&#x20;
-* \_transferToL2 - whether or not transfer knBONE to Shibarium
-{% endhint %}
+
+!!! info
+    * \_amount - Amount of BONE sent from msg.sender to this contract&#x20;
+    * \_receiver - receiver address&#x20;
+    * \_transferToL2 - whether or not transfer knBONE to Shibarium
+
 
 ### requestWithdrawSplit
 
@@ -330,7 +331,7 @@ function requestWithdrawSplit(uint256 _instantPoolAmount,
        returns(uint256)
 ```
 
-Request withdrawal function, allows using the instant pool and/or creating requests. \
+Request withdrawal function, allows using the instant pool and/or creating requests. 
 \_user must be the _sender_ or _any address_ if the function is called from BRIDGE\_EXECUTOR\_ROLE. When executed:
 
 * knBONE amount of the withdrawal request is burned&#x20;
@@ -338,11 +339,12 @@ Request withdrawal function, allows using the instant pool and/or creating reque
 
 Returns _tokenID_ if there was a request or _0_ if there was no request.
 
-{% hint style="info" %}
-* \_instantPoolAmount - Amount of knBONE that is requested to withdraw using instant reward pool&#x20;
-* \_requestWithdrawAmount - Amount of knBONE that is requested to withdraw using withdrawal request
-* \_user - user to withdraw from
-{% endhint %}
+
+!!! info
+    * \_instantPoolAmount - Amount of knBONE that is requested to withdraw using instant reward pool&#x20;
+    * \_requestWithdrawAmount - Amount of knBONE that is requested to withdraw using withdrawal request
+    * \_user - user to withdraw from
+
 
 ### delegate
 
@@ -368,11 +370,12 @@ function distributeRewards() external whenNotPaused nonReentrant
 
 Distributes the protocol rewards received from validator.&#x20;
 
-{% hint style="info" %}
-* Creates a variable _totalRewards_ equal to (contract balance - totalBuffered).&#x20;
-* Calculates the protocol fee amount based on protocolFee%.&#x20;
-* Then distributes the protocol fee amount according to the entity fees, the rest is added to totalBuffered for re-delegation.
-{% endhint %}
+
+!!! info
+    * Creates a variable _totalRewards_ equal to (contract balance - totalBuffered).&#x20;
+    * Calculates the protocol fee amount based on protocolFee%.&#x20;
+    * Then distributes the protocol fee amount according to the entity fees, the rest is added to totalBuffered for re-delegation.
+
 
 ### withdrawTotalDelegated
 
@@ -392,12 +395,13 @@ function rebalanceDelegatedTokens() external onlyRole(DAO_ROLE)
 
 Rebalane the system by request withdraw from the validators that contains more token delegated to them.
 
-{% hint style="info" %}
-* Calculates amountToReDelegate as \
-  `(totalBuffered - reservedFunds + calculatePendingBufferedTokens())`.&#x20;
-* Sends it into`NodeOperatorRegistry.getValidatorsRebalanceAmount()` and gets a response.&#x20;
-* Based on the response, creates a withdrawal request for each `ValidatorShare`.&#x20;
-{% endhint %}
+
+!!! info
+    * Calculates amountToReDelegate as 
+`(totalBuffered - reservedFunds + calculatePendingBufferedTokens())`.&#x20;
+    * Sends it into`NodeOperatorRegistry.getValidatorsRebalanceAmount()` and gets a response.&#x20;
+    * Based on the response, creates a withdrawal request for each `ValidatorShare`.&#x20;
+
 
 ### calculatePendingBufferedTokens
 
@@ -423,9 +427,10 @@ Processes the specified request in _knBONEWithdrawRequest_. Claims tokens from v
 
 ## Admin Methods
 
-{% hint style="info" %}
-This method can be called by ADMIN-only roles
-{% endhint %}
+
+!!! info
+    This method can be called by ADMIN-only roles
+
 
 ### pause
 
@@ -445,9 +450,10 @@ Unpause knBONE contract
 
 ## DAO Methods - setters
 
-{% hint style="info" %}
-These methods can be called by DAO-only roles
-{% endhint %}
+
+!!! info
+    These methods can be called by DAO-only roles
+
 
 ### setProtocolFee
 

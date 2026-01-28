@@ -8,17 +8,25 @@ Farming pool Factory contract. Executes the functionality of deploying new farmi
 
 <mark style="color:orange;">`bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");`</mark> - admin role identifier.
 
-<mark style="color:orange;">`address public esKnine;`</mark> - esKNINE token address.\
-<mark style="color:orange;">`address public router;`</mark> - UniswapV2Router02 (ShibaSwap) contract address. \
-<mark style="color:orange;">`address public wbone;`</mark> - wrapped native coin address.\
-<mark style="color:orange;">`address public farmingImplementation;`</mark> - contract storing the farming implementation code (FarmingInstanceV2) address.\
+<mark style="color:orange;">`address public esKnine;`</mark> - esKNINE token address.
+<mark style="color:orange;">`address public router;`</mark> - UniswapV2Router02 (ShibaSwap) contract address. 
+<mark style="color:orange;">`address public wbone;`</mark> - wrapped native coin address.
+<mark style="color:orange;">`address public farmingImplementation;`</mark> - contract storing the farming implementation code (FarmingInstanceV2) address.
 <mark style="color:orange;">`ZapFees public zapFees;`</mark> - ZapFees struct object.
 
-<mark style="color:orange;">`struct ZapFees {`</mark>\ <mark style="color:orange;">`uint8 entry;`</mark> - zapping entry fee.\ <mark style="color:orange;">`uint8 exit;`</mark>  - zapping exit fee.\ <mark style="color:orange;">`}`</mark>
+<mark style="color:orange;">`struct ZapFees {`</mark>
+<mark style="color:orange;">`uint8 entry;`</mark> - zapping entry fee.
+<mark style="color:orange;">`uint8 exit;`</mark>  - zapping exit fee.
+<mark style="color:orange;">`}`</mark>
 
 ## Events
 
-<mark style="color:orange;">`event CreateFarming(`</mark>\ <mark style="color:orange;">`address proxyDeployed,`</mark> - deployed farming pool (FarmingProxyV2) address.\ <mark style="color:orange;">`address currentImplementation,`</mark> - current implementation (FarmingInstanceV2) address.\ <mark style="color:orange;">`address token0,`</mark> -  `token0` address from the liquidity pool.\ <mark style="color:orange;">`address token1,`</mark> - `token1` address from the liquidity pool.\ <mark style="color:orange;">`);`</mark> - upon _createFarming_ method call.\
+<mark style="color:orange;">`event CreateFarming(`</mark>
+<mark style="color:orange;">`address proxyDeployed,`</mark> - deployed farming pool (FarmingProxyV2) address.
+<mark style="color:orange;">`address currentImplementation,`</mark> - current implementation (FarmingInstanceV2) address.
+<mark style="color:orange;">`address token0,`</mark> -  `token0` address from the liquidity pool.
+<mark style="color:orange;">`address token1,`</mark> - `token1` address from the liquidity pool.
+<mark style="color:orange;">`);`</mark> - upon _createFarming_ method call.
 <mark style="color:orange;">`event NativeReceived(uint256 amount);`</mark> - upon receiving the native coin.
 
 ## Admin Functions
@@ -62,9 +70,10 @@ RewardPool calldata rew
 
 Creates new farming pool based on the provided liquidity and reward pools info.
 
-{% hint style="info" %}
-Only for DEFAULT\_ADMIN\_ROLE or ADMIN\_ROLE role
-{% endhint %}
+
+!!! info
+    Only for DEFAULT\_ADMIN\_ROLE or ADMIN\_ROLE role
+
 
 ### addBonusPool
 
@@ -77,9 +86,10 @@ RewardPool calldata rew
 
 Adds `rew` bonus reward pool  to the `farming` farming pool.
 
-{% hint style="info" %}
-Only for DEFAULT\_ADMIN\_ROLE or ADMIN\_ROLE role
-{% endhint %}
+
+!!! info
+    Only for DEFAULT\_ADMIN\_ROLE or ADMIN\_ROLE role
+
 
 ### initialize
 
@@ -94,9 +104,10 @@ address _wbone
 
 Initializer function, not called after initialization.
 
-{% hint style="info" %}
-Only for the initializer role
-{% endhint %}
+
+!!! info
+    Only for the initializer role
+
 
 ## Default Admin Functions
 
@@ -179,9 +190,10 @@ function recovery(address token) external
 
 Withdraw transferred tokens from the contract.
 
-{% hint style="info" %}
-If the output is a wrapped native coin, it will unwrap and return the native coin itself
-{% endhint %}
+
+!!! info
+    If the output is a wrapped native coin, it will unwrap and return the native coin itself
+
 
 ## **View Functions**
 

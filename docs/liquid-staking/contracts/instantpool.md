@@ -6,8 +6,8 @@ InstantPool contract is responsible for the instant BONE payout. When user reque
 
 ### Variables
 
-<mark style="color:orange;">`bytes32 public constant PAUSE_ROLE = keccak256("PAUSE_ROLE");`</mark> - pauser role identifier\
-<mark style="color:orange;">`bytes32 public constant UNPAUSE_ROLE = keccak256("UNPAUSE_ROLE");`</mark> - unpauser role identifier\
+<mark style="color:orange;">`bytes32 public constant PAUSE_ROLE = keccak256("PAUSE_ROLE");`</mark> - pauser role identifier
+<mark style="color:orange;">`bytes32 public constant UNPAUSE_ROLE = keccak256("UNPAUSE_ROLE");`</mark> - unpauser role identifier
 <mark style="color:orange;">`bytes32 public constant WITHDRAWER_ROLE = keccak256("WITHDRAWER_ROLE");`</mark> - withdrawer role identifier
 
 ### Methods

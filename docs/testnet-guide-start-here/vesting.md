@@ -1,11 +1,11 @@
----
+﻿---
 description: How to use Vesting interface for esKNINE
 ---
 
 # Vesting
 
-1. Click on "Vesting" in the left hand menu\
-   ![](<../.gitbook/assets/image (4).png>)
+1. Click on "Vesting" in the left hand menu
+![](<../assets/image (4).png>)
 2.  This interface is for vesting esKNINE rewards received via Real Yield Staking of KNINE.<br>
 
     <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXeWMZu_qI5_hxbp5OQ2vyD6s46T-Gzg17c0637p_205gZEJdxfMpgZa6obOd_L21BYQ1vcLBTqjx0OI90XjhNZBNm2Cz380W42tS3oV8bP7mNyOMWBO5TqxV5agGqKRfrsLiRG-X-cqQmEr9fMGjlZqiWDy?key=UHJy3JQkr0xZIlPVeyb1AA" alt=""><figcaption></figcaption></figure>
@@ -34,7 +34,7 @@ description: How to use Vesting interface for esKNINE
     ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeU3cqCgYHJCKRTvDtJiTqeTc6RUPP5txgs-CIfkqj-xq9ub6YN490J_0xGsWNgdSzj-9nCOWSHEwp4jaPZbSJZhgaiZfSpA5rZQ9Zh9-Iaw_QpPK44HeUhIzB-J_fBhRRWw-ednHeDjAuWOFudZM16CFBA?key=UHJy3JQkr0xZIlPVeyb1AA)
 
     * "Amount" input field for entering the esKNINE deposit amount;
-    * Your current balance of esKNINE tokens and the “Use max” button to deposit the entire amount;
+    * Your current balance of esKNINE tokens and the â€œUse maxâ€ button to deposit the entire amount;
     * Backing ratio - the reserve ratio of KNINE staked at Real Yield to enable vesting esKNINE;
     * Vesting ratio - the conversion rate for esKNINE;
     * Your vesting limit - shows the maximum amount of esKNINE you can currently convert according to your KNINE staked at Real Yield and the backing ratio;
@@ -44,12 +44,12 @@ description: How to use Vesting interface for esKNINE
 
     ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXedrGrBMJP4xT5MZsfp4Ggh5v6uyygrHrlew5myNVTAX1cqcRAbLrIxHQ1Hwgvz0imtHaTCS8HQvuru07NFBLvhOnAri4ZKABC0OGud2Ju0CDYSsu5zWHYSedZz1Sa9LCJwwdQT1DWuvfcmDSqj89Oj3j7Z?key=UHJy3JQkr0xZIlPVeyb1AA)
 
-    1. Time left - displays the remaining time until the end of the current vesting. If there is no active vesting, “No Vesting” will be indicated.
+    1. Time left - displays the remaining time until the end of the current vesting. If there is no active vesting, â€œNo Vestingâ€ will be indicated.
     2. Total vested - displays your balance of unconverted tokens;
     3. Reward - displays the amount of converted KNINE that you can claim;
     4. "Claim" button;
     5. "ELIGIBILITY" block:
-       1. “Deposited on Real Yield” or “Locked on Real Yield” (depending on the lockedOnly status) - displays the amount of your KNINE deposit in Real Yield Staking that is taken into account for Vesting;
+       1. â€œDeposited on Real Yieldâ€ or â€œLocked on Real Yieldâ€ (depending on the lockedOnly status) - displays the amount of your KNINE deposit in Real Yield Staking that is taken into account for Vesting;
        2. Used for Vesting - shows the amount of your KNINE staked at Real Yield that is currently being used as collateral to convert your vested esKNINE;
        3. Available for Vesting - shows the amount of your KNINE staked at Real Yield that you can currently use to convert additional esKNINE;
        4. Lock days left - displays the number of remaining days of locking KNINE tokens in Real Yield Staking;<br>
@@ -61,10 +61,10 @@ description: How to use Vesting interface for esKNINE
 * Make sure the amount entered does not exceed "Your vesting limit";
 
 7. **Click "Vest" and confirm the transaction in your wallet;**
-8. **Wait for the transaction to complete. Popup window displays the transaction progress:**\
-   ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeVPLJYt36chu3g6tRGyGnQBu9DjVNaZrWRmvJ6L4iq5ZjUozzC2aMjFlYasbdeZDQHsdykWHneXCuTb2J8CAVwaWZhYfrwCn2qvj7hqDh_doz9ktonrc1OJ_EQqI8SPX1Qk2yO0IbrFgMH_Ka3eaaAZxRS?key=UHJy3JQkr0xZIlPVeyb1AA)
+8. **Wait for the transaction to complete. Popup window displays the transaction progress:**
+![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeVPLJYt36chu3g6tRGyGnQBu9DjVNaZrWRmvJ6L4iq5ZjUozzC2aMjFlYasbdeZDQHsdykWHneXCuTb2J8CAVwaWZhYfrwCn2qvj7hqDh_doz9ktonrc1OJ_EQqI8SPX1Qk2yO0IbrFgMH_Ka3eaaAZxRS?key=UHJy3JQkr0xZIlPVeyb1AA)
 9. **Once the transaction is completed, the updated deposit amount will appear in "Total vested";**
-10. **Wait a while and check the “Reward” field. The number of KNINE converted will increase according to the vesting ratio. You can withdraw these tokens at any time.**
+10. **Wait a while and check the â€œRewardâ€ field. The number of KNINE converted will increase according to the vesting ratio. You can withdraw these tokens at any time.**
 
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeTEyokyB5dkN4fs1Fnq-gDGcQOnVD-LW_vsty0O7q8QCBNG9r-LNuTAe71IW4t3dPozbsVM8CE228Xr2ZDe8Y2RngX1EEUBafZFUhuZNCoLPi0Z_AtsaWzeEJiJoQwiSHdHqn_0HuQZj3nxzAgDCd6QXMq?key=UHJy3JQkr0xZIlPVeyb1AA)
 
@@ -74,7 +74,7 @@ description: How to use Vesting interface for esKNINE
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeXqtqpFiPGxgIKAK_7B4XrqKe6JIyf5GEoUuV0XrheZbVtiDaAbaslndAYdLbexAKSygpO1SZp1cs93htTUebkKzD7HjCcj4h4ArZyRvIqOSP8MOTFqsxdtrSkXkMLdUgWhQaoRyYusdljDXOR9b_ANn5G?key=UHJy3JQkr0xZIlPVeyb1AA)
 
 10. After completing the transaction, check the KNINE balance in your wallet;<br>
-11. Wait until the end of the “Vesting period” and click the “Claim” button again to receive the accumulated KNINE tokens.
+11. Wait until the end of the â€œVesting periodâ€ and click the â€œClaimâ€ button again to receive the accumulated KNINE tokens.
 
 ### Steps to Add More esKNINE to Existing Vesting
 
@@ -84,23 +84,23 @@ You can increase your esKNINE deposit to active vesting by entering a new amount
 
 1. Make sure that the new amount does not exceed "Your vesting limit";
 2. Make sure that the "Lock days left" of your Real Yield Staking deposit is greater than the "Vesting period";
-3. Confirm the transaction in your wallet and wait until the transaction is processed (the transaction status is displayed in a modal window);\
-   ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXcvu9jYicU9i6Z5Hj-NEQPA772OTIhQYHf8dHUUm8C1j3R7GfKdENt78n9oZa-VxuUvExJ_h8QhsWFrtkmWQqN6g-PvBD_7ZKxisl6TfsMkYQFtDgd-iTT92kI1tULsWijczgDeMN-UDs8NJHqvjqyAc5M?key=UHJy3JQkr0xZIlPVeyb1AA)
+3. Confirm the transaction in your wallet and wait until the transaction is processed (the transaction status is displayed in a modal window);
+![](https://lh7-us.googleusercontent.com/docsz/AD_4nXcvu9jYicU9i6Z5Hj-NEQPA772OTIhQYHf8dHUUm8C1j3R7GfKdENt78n9oZa-VxuUvExJ_h8QhsWFrtkmWQqN6g-PvBD_7ZKxisl6TfsMkYQFtDgd-iTT92kI1tULsWijczgDeMN-UDs8NJHqvjqyAc5M?key=UHJy3JQkr0xZIlPVeyb1AA)
 
 Vesting will be restarted and the new deposit will be added to the esKNINE balance. Wait for a while and check that the number of converted KNINEs increases in accordance with the new vesting ratio.
 
-1. Make sure the reward amount is displayed in the "Reward" field;\
-   ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeaimPYti3O3UN24ehbSlWaKeWTIWU89C36o7qfnzcuTKEx6UeVx4HSEg71uXVAh_JoMTmaTUOEVbwORow_Ts0JBgPfwdF-NBufWcw9XShs0Rrar-Hf7cHZWkkABsVgx1aOzTq-PFQv29Ip84l_bj6wrWU?key=UHJy3JQkr0xZIlPVeyb1AA)
+1. Make sure the reward amount is displayed in the "Reward" field;
+![](https://lh7-us.googleusercontent.com/docsz/AD_4nXeaimPYti3O3UN24ehbSlWaKeWTIWU89C36o7qfnzcuTKEx6UeVx4HSEg71uXVAh_JoMTmaTUOEVbwORow_Ts0JBgPfwdF-NBufWcw9XShs0Rrar-Hf7cHZWkkABsVgx1aOzTq-PFQv29Ip84l_bj6wrWU?key=UHJy3JQkr0xZIlPVeyb1AA)
 2. Click the "Claim" button and confirm the transaction:
    * Make sure that the amount of KNINE on your balance has increased by the stated amount;
-3. Wait until the end of the new “Vesting period” and press the “Claim” button again to claim the rest of the reward:
+3. Wait until the end of the new â€œVesting periodâ€ and press the â€œClaimâ€ button again to claim the rest of the reward:
    * Make sure that the remaining reward (KNINE) has been successfully received.
 
 ### How unstaking from Real Yield Staking affects your Vesting
 
 An option is available for Vesting - take into account KNINE tokens from Real Yield Staking that are deposited without lockup.&#x20;
 
-You can determine whether this option is available by looking at the Deposited on Real Yield / Locked on Real Yield field in the ELIGIBILITY block. If ‘Deposited on Real Yield’ is specified, then Vesting is allowed to additionally use KNINE tokens staked without lockup.
+You can determine whether this option is available by looking at the Deposited on Real Yield / Locked on Real Yield field in the ELIGIBILITY block. If â€˜Deposited on Real Yieldâ€™ is specified, then Vesting is allowed to additionally use KNINE tokens staked without lockup.
 
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXe5F2uOaDFvPhs59VFMhjjvTh3NS4tVCKls3uV87FrkeQpBoL7eu8_yj-SGhR0YLKcegSuw-0IIRQLCphVuoWHnBfLlP1fYx9T1IXTkSe1akjDS4udycDO-EIk7H2l688J3IWnq314_L_f8UybYFJSCbzzP?key=UHJy3JQkr0xZIlPVeyb1AA)
 
@@ -111,4 +111,5 @@ If such tokens are used to provide your vesting, then their premature withdrawal
     <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXecaKp_Wk3CkEQIhRifd_Q5kRHZj9PZwAfKLRNt7Jpf7VaLE0rmob_hs5Ysq4WCHW_Q7IGPadZXjFlPvlbpzMOnJDR9F8pcO-OiVuwGaF2y23m-IjCOiNxjD4wdfn3jL9X5C0Yuo77jU1oY5cvh34qtjEg?key=UHJy3JQkr0xZIlPVeyb1AA" alt=""><figcaption></figcaption></figure>
 2. Go to the Vesting page to see your updated Vesting settings (form on the right):
    * Make sure that the esKNINE deposit balance has been recalculated in accordance with the new conditions.
+
 

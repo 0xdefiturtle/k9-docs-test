@@ -1,0 +1,93 @@
+site_name: K9 Finance DAO Product Documentation
+docs_dir: docs
+theme:
+  name: material
+  favicon: favicon.ico
+
+  nav:
+  - Overview: index.md
+  - Administration: administration.md
+  - How K9 Finance DAO works: how-k9-finance-dao-works.md
+  - Liquid Staking:
+    - Architecture: liquid-staking/architecture.md
+    - Protocol Fee and Rewards: liquid-staking/protocol-fee-and-rewards.md
+    - Contracts:
+      - knBONE: liquid-staking/contracts/knbone.md
+      - NodeOperatorRegistry: liquid-staking/contracts/nodeoperatorregistry.md
+      - InstantPool: liquid-staking/contracts/instantpool.md
+      - UnstBONE: liquid-staking/contracts/unstbone.md
+      - BridgeETH: liquid-staking/contracts/bridgeeth.md
+      - BridgeSHIB: liquid-staking/contracts/bridgeshib.md
+  - Farming:
+    - Architecture: farming/architecture.md
+    - Contracts:
+      - FarmingFactory: farming/contracts/farmingfactory.md
+      - FarmingInstance: farming/contracts/farminginstance.md
+  - Real Yield Staking:
+    - Architecture: real-yield-staking/architecture.md
+    - RealYieldStaking Contract: real-yield-staking/realyieldstaking-contract.md
+  - Vesting:
+    - Architecture: vesting/architecture.md
+    - Vesting Contract: vesting/vesting-contract.md
+  - Integrations:
+    - API: integrations/api.md
+    - SDKs and UI libraries: integrations/sdks-and-ui-libraries.md
+    - Node Operators: integrations/node-operators.md
+  - Security:
+    - Audits: security/audits.md
+  - Deployed Contracts:
+    - Testnet: deployed-contracts/testnet.md
+    - Mainnet: deployed-contracts/mainnet.md
+  - FAQ: faq.md
+  - Testnet Guide - START HERE:
+    - Liquid Staking:
+      - Stake: testnet-guide-start-here/liquid-staking/stake.md
+      - Unstake: testnet-guide-start-here/liquid-staking/unstake.md
+      - Claim: testnet-guide-start-here/liquid-staking/claim.md
+      - Rewards: testnet-guide-start-here/liquid-staking/rewards.md
+    - Farming:
+      - Stake/Unstake LP: testnet-guide-start-here/farming/stake-unstake-lp.md
+      - Zap: testnet-guide-start-here/farming/zap.md
+      - Claim All: testnet-guide-start-here/farming/claim-all.md
+      - Bonus Rewards: testnet-guide-start-here/farming/bonus-rewards.md
+    - Real Yield Staking:
+      - Stake with Lock: testnet-guide-start-here/real-yield-staking/stake-with-lock.md
+      - Stake without Lock: testnet-guide-start-here/real-yield-staking/stake-without-lock.md
+      - Claim Rewards: testnet-guide-start-here/real-yield-staking/claim-rewards.md
+      - Withdraw: testnet-guide-start-here/real-yield-staking/withdraw.md
+    - Vesting: testnet-guide-start-here/vesting.md
+  - Mainnet Guide - START HERE:
+    - Liquid Staking:
+      - Stake: mainnet-guide-start-here/liquid-staking/stake.md
+      - Unstake: mainnet-guide-start-here/liquid-staking/unstake.md
+      - Claim: mainnet-guide-start-here/liquid-staking/claim.md
+      - Rewards: mainnet-guide-start-here/liquid-staking/rewards.md
+    - Farming:
+      - Stake/Unstake LP: mainnet-guide-start-here/farming/stake-unstake-lp.md
+      - Zap: mainnet-guide-start-here/farming/zap.md
+      - Claim All: mainnet-guide-start-here/farming/claim-all.md
+      - Bonus Rewards: mainnet-guide-start-here/farming/bonus-rewards.md
+    - Real Yield Staking:
+      - Stake with Lock: mainnet-guide-start-here/real-yield-staking/stake-with-lock.md
+      - Stake without Lock: mainnet-guide-start-here/real-yield-staking/stake-without-lock.md
+      - Claim Rewards: mainnet-guide-start-here/real-yield-staking/claim-rewards.md
+      - Withdraw: mainnet-guide-start-here/real-yield-staking/withdraw.md
+    - Vesting: mainnet-guide-start-here/vesting.md
+
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+
+extra_css:
+  - stylesheets/k9.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite

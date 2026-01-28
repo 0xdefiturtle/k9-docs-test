@@ -1,4 +1,4 @@
-# Vesting
+﻿# Vesting
 
 The Vesting functionality within our project empowers you to strategically unlock the value of your esKNINE tokens over a predetermined period. This feature allows you to lock your esKNINE tokens in exchange for KNINE tokens, distributed linearly throughout the chosen vesting period.
 
@@ -17,4 +17,5 @@ Vesting rules are:
 5. esKNINE is converted into KNINE according to the vesting ratio.
 6. You can increase your vested amount by adding more esKNINE if the **basic rule** is completed.
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>Vesting Overview</p></figcaption></figure>
+<figure><img src="../assets/image (32).png" alt=""><figcaption><p>Vesting Overview</p></figcaption></figure>
+

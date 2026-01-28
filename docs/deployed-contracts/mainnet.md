@@ -11,7 +11,6 @@
 <table><thead><tr><th width="281">Name</th><th>Address</th></tr></thead><tbody><tr><td>NODE_OPERATOR_REGISTRY_IMPL</td><td>0x5cFeF212f56BD343E54BD3d4994a6DBf1B4bca8E</td></tr><tr><td>UNST_BONE_IMPL</td><td>0xF671428A5d7bD3B097e9f4Caa9F1F5c72E99bF5D</td></tr><tr><td>KN_BONE_IMPL</td><td>0x49dAeD112eA68c6dCC3Ffce8Aad355760263e1fe</td></tr><tr><td>INSTANT_POOL_IMPL</td><td>0x34dEF2023a26B5ae3AAABbc29cD1A3F1E4FF68B2</td></tr><tr><td>BRIDGE_ETH_IMPL</td><td>0x767174f60eDC0bb0203a2f8e081AF20D2dA667AA</td></tr></tbody></table>
 
 
-
 ## Shibarium Mainnet:
 
 ### Token Contracts

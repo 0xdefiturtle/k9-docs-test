@@ -8,21 +8,25 @@ Response schema and examples are available in the <mark style="color:yellow;">**
 
 This APR value is based on Simple Moving Average of APR values over a period of 7 days.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### ETH Price[​](https://docs.lido.fi/integrations/api#lido-apr) <a href="#lido-apr" id="lido-apr"></a>
 
 Returns the ETH price for further calculations.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Liquid Staking rewards[​](https://docs.lido.fi/integrations/api#lido-apr) <a href="#lido-apr" id="lido-apr"></a>
 
@@ -82,63 +86,75 @@ Returns the list of validators connected to the liquid staking protocol.
 
 Returns the list of all farming pools within the Farming functionality of K9 Finance DAO.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Farming pool info[​](https://docs.lido.fi/integrations/api#lido-apr) <a href="#lido-apr" id="lido-apr"></a>
 
 Returns the full info about the farming pool within the Farming functionality of K9 Finance DAO from ordered list.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Farming pool info[​](https://docs.lido.fi/integrations/api#lido-apr) <a href="#lido-apr" id="lido-apr"></a>
 
 Returns the full info about the farming pool within the Farming functionality of K9 Finance DAO by pool address.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Farming pool - Bonus reward[​](https://docs.lido.fi/integrations/api#lido-apr) pools <a href="#lido-apr" id="lido-apr"></a>
 
 Returns the full info about the bonus reward pools of the farming pool by its address.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Farming pool - Bonus reward[​](https://docs.lido.fi/integrations/api#lido-apr) pool <a href="#lido-apr" id="lido-apr"></a>
 
 Returns the full info about the bonus reward pool of the farming pool by its address and bonus pool id.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
+
 
 ### Price rates[​](https://docs.lido.fi/integrations/api#lido-apr) <a href="#lido-apr" id="lido-apr"></a>
 
 Returns a list of multiple rates for further calculations.
 
-{% code fullWidth="false" %}
+
+```
 ```
 (will update when protocol goes live)
 ```
-{% endcode %}
+```
 
-{% hint style="info" %}
-Testnet response schema and examples are available in the !testnet app swagger link!
-{% endhint %}
+
+!!! info
+    Testnet response schema and examples are available in the !testnet app swagger link!
+
 

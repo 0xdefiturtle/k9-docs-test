@@ -4,10 +4,10 @@ description: K9 Finance DAO Ecosystem Overview
 
 # Overview
 
-**K9 Shibarium products are shutting down due to the Shibarium bridge hack.**\
-**Remove tokens from K9 products by Feb 25, 2026.**\
-[→ DAO Vote Results ←](https://snapshot.org/#/s:k9safe.eth/proposal/0x952ffa3317c173e72b4ee38cd3075ac47f661996d8a23c29487d1b40a984dd91)\
-\
+**K9 Shibarium products are shutting down due to the Shibarium bridge hack.**
+**Remove tokens from K9 products by Feb 25, 2026.**
+[→ DAO Vote Results ←](https://snapshot.org/#/s:k9safe.eth/proposal/0x952ffa3317c173e72b4ee38cd3075ac47f661996d8a23c29487d1b40a984dd91)
+
 K9 Finance is a DAO governed liquid staking protocol for the Shibarium blockchain. The product allows users to stake their ERC20 BONE tokens on Ethereum mainnet and immediately get the representation of their share in the form of knBONE liquid staking tokens on Shibarium without maintaining their own staking infrastructure. Users will get staking rewards and still be able to retain custody of their knBONE tokens. BONE tokens will be delegated across validators that are registered and accepted by the DAO inside the K9 Finance liquid staking protocol.
 
 * Node operators don't have direct access over the delegated assets.

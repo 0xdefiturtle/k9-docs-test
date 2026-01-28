@@ -8,18 +8,32 @@ The contract is responsible for staking KNINE tokens to receive BONE  rewards. T
 
 <mark style="color:orange;">`IERC20 public KNINE;`</mark> - KNINE token address.
 
-<mark style="color:orange;">`uint256 public maxLockMultiplier;`</mark> - maximum multiplier value (for 12-months lock), multiplied by 10^18 (must be stored this way for correct calculations).\
+<mark style="color:orange;">`uint256 public maxLockMultiplier;`</mark> - maximum multiplier value (for 12-months lock), multiplied by 10^18 (must be stored this way for correct calculations).
 <mark style="color:orange;">`uint256 public excessReward;`</mark> - extra amount of reward (in native). This extra amount appears from solidoty-specific integer division.
 
 <mark style="color:orange;">`uint256 public totalStakers;`</mark> - number of unique stakers in the pool.
 
 <mark style="color:orange;">`PoolInfo public poolInfo;`</mark> - general information on the reward pool in form of the PoolInfo struct (see below).
 
-<mark style="color:orange;">`struct PoolInfo {`</mark>\ <mark style="color:orange;">`uint256 startTime;`</mark> - global contract start time.\ <mark style="color:orange;">`uint256 endTime;`</mark> - global contract shutdown time.\ <mark style="color:orange;">`uint256 periodFinish;`</mark> - time of the last or upcoming end of reward distribution.\ <mark style="color:orange;">`uint256 lastUpdate;`</mark> - last update time.\ <mark style="color:orange;">`uint256 rps;`</mark> - current reward per second distribution amount.\ <mark style="color:orange;">`uint256 totalStaked;`</mark> - how many tokens are currently locked.\ <mark style="color:orange;">`uint256 totalWeight;`</mark> - total weight of stakers in the pool.\ <mark style="color:orange;">`uint256 acc;`</mark> - last updated accumulator value. \ <mark style="color:orange;">`}`</mark>
+<mark style="color:orange;">`struct PoolInfo {`</mark>
+<mark style="color:orange;">`uint256 startTime;`</mark> - global contract start time.
+<mark style="color:orange;">`uint256 endTime;`</mark> - global contract shutdown time.
+<mark style="color:orange;">`uint256 periodFinish;`</mark> - time of the last or upcoming end of reward distribution.
+<mark style="color:orange;">`uint256 lastUpdate;`</mark> - last update time.
+<mark style="color:orange;">`uint256 rps;`</mark> - current reward per second distribution amount.
+<mark style="color:orange;">`uint256 totalStaked;`</mark> - how many tokens are currently locked.
+<mark style="color:orange;">`uint256 totalWeight;`</mark> - total weight of stakers in the pool.
+<mark style="color:orange;">`uint256 acc;`</mark> - last updated accumulator value. 
+<mark style="color:orange;">`}`</mark>
 
 ## Events
 
-<mark style="color:orange;">`event Deposited(`</mark>\ <mark style="color:orange;">`address user,`</mark>\ <mark style="color:orange;">`uint256 amount,`</mark>\ <mark style="color:orange;">`uint256 weight,`</mark>\ <mark style="color:orange;">`uint256 lockEnds`</mark>\ <mark style="color:orange;">`);`</mark> - upon `deposit` call, returns:
+<mark style="color:orange;">`event Deposited(`</mark>
+<mark style="color:orange;">`address user,`</mark>
+<mark style="color:orange;">`uint256 amount,`</mark>
+<mark style="color:orange;">`uint256 weight,`</mark>
+<mark style="color:orange;">`uint256 lockEnds`</mark>
+<mark style="color:orange;">`);`</mark> - upon `deposit` call, returns:
 
 * The user's address,
 * The number of deposited tokens,
@@ -49,9 +63,10 @@ The contract is responsible for staking KNINE tokens to receive BONE  rewards. T
 function initialize(address _knine, address _admin) public
 ```
 
-{% hint style="info" %}
-For the initializer role only
-{% endhint %}
+
+!!! info
+    For the initializer role only
+
 
 Initializer function, not called after initialization.
 
@@ -108,9 +123,10 @@ function setMaxMultiplier(uint256 value) external
 
 Set the maximum multiplier value.
 
-{% hint style="warning" %}
-input value should be multiplied by 10^18
-{% endhint %}
+
+!!! warning
+    input value should be multiplied by 10^18
+
 
 ## **User Functions**
 
@@ -122,9 +138,10 @@ function deposit(uint256 amount, uint8 lockDuration) external
 
 Making a new deposit or adding to the current one with the ability to set a lockup.
 
-{% hint style="warning" %}
-&#x20;For <mark style="color:orange;">`lockDuration`</mark>- input the number of months for a lockup, 0 means no lockup
-{% endhint %}
+
+!!! warning
+    &#x20;For <mark style="color:orange;">`lockDuration`</mark>- input the number of months for a lockup, 0 means no lockup
+
 
 ### increaseLockup
 
@@ -134,9 +151,10 @@ function increaseLockup(uint8 lockDuration) external
 
 Increasing the lockup.&#x20;
 
-{% hint style="warning" %}
-For <mark style="color:orange;">`lockDuration`</mark> - input the number of months for lockup, the lock period will restart
-{% endhint %}
+
+!!! warning
+    For <mark style="color:orange;">`lockDuration`</mark> - input the number of months for lockup, the lock period will restart
+
 
 ### withdraw
 
@@ -146,10 +164,11 @@ function withdraw(bool isLocked) external
 
 Withdrawing a deposit.
 
-{% hint style="info" %}
-* <mark style="color:orange;">`isLocked == true`</mark> - withdrawal of a locked deposit (which lockup period has ended)
-* <mark style="color:orange;">`isLocked==false`</mark> - withdrawal of a non-locked deposit
-{% endhint %}
+
+!!! info
+    * <mark style="color:orange;">`isLocked == true`</mark> - withdrawal of a locked deposit (which lockup period has ended)
+    * <mark style="color:orange;">`isLocked==false`</mark> - withdrawal of a non-locked deposit
+
 
 ### claimRewards
 
@@ -159,10 +178,11 @@ function claimRewards(bool isLocked) public
 
 &#x20;Claiming rewards.
 
-{% hint style="info" %}
-* <mark style="color:orange;">`isLocked == true`</mark> - withdrawal of a locked deposit (which lockup period has ended)
-* <mark style="color:orange;">`isLocked==false`</mark> - withdrawal of a non-locked deposit
-{% endhint %}
+
+!!! info
+    * <mark style="color:orange;">`isLocked == true`</mark> - withdrawal of a locked deposit (which lockup period has ended)
+    * <mark style="color:orange;">`isLocked==false`</mark> - withdrawal of a non-locked deposit
+
 
 ### claimTotalRewards
 
@@ -184,10 +204,11 @@ address user
 
 Show accumulated rewards by user address.
 
-{% hint style="info" %}
-* the first value is a locked deposit rewards
-* the second value is a non-locked deposit rewards
-{% endhint %}
+
+!!! info
+    * the first value is a locked deposit rewards
+    * the second value is a non-locked deposit rewards
+
 
 ### userDeposits
 
@@ -199,11 +220,18 @@ address user
 
 Information on the user’s deposits in the _UserInfo_ struct format.
 
-{% hint style="info" %}
-* the first value is a locked deposit rewards
-* the second value is a non-locked deposit rewards
-{% endhint %}
+
+!!! info
+    * the first value is a locked deposit rewards
+    * the second value is a non-locked deposit rewards
+
 
 ### UserInfo&#x20;
 
-<mark style="color:orange;">`struct UserInfo {`</mark>\ <mark style="color:orange;">`uint256 amount;`</mark> - number of staked tokens.\ <mark style="color:orange;">`uint256 weight;`</mark> - deposit weight.\ <mark style="color:orange;">`uint256 acc;`</mark> - last recorded battery value.\ <mark style="color:orange;">`uint256 debt;`</mark> - last counted recorded reward.\ <mark style="color:orange;">`uint256 lockEnd;`</mark> - when the lock ends (for unlocked deposits there will be 0).\ <mark style="color:orange;">`}`</mark>
+<mark style="color:orange;">`struct UserInfo {`</mark>
+<mark style="color:orange;">`uint256 amount;`</mark> - number of staked tokens.
+<mark style="color:orange;">`uint256 weight;`</mark> - deposit weight.
+<mark style="color:orange;">`uint256 acc;`</mark> - last recorded battery value.
+<mark style="color:orange;">`uint256 debt;`</mark> - last counted recorded reward.
+<mark style="color:orange;">`uint256 lockEnd;`</mark> - when the lock ends (for unlocked deposits there will be 0).
+<mark style="color:orange;">`}`</mark>

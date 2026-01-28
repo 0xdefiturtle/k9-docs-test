@@ -18,17 +18,41 @@ The contract is responsible for managing users deposits and converting esKNINE i
 
 <mark style="color:orange;">`Settings public settings;`</mark> - vesting parameters in the Settings struct format.
 
-<mark style="color:orange;">`mapping(address => Deposit) public deposits;`</mark> - mapping, assigning the Deposit struct for each user address.\
-\
-<mark style="color:orange;">`struct Settings {`</mark>\ <mark style="color:orange;">`bool lockedOnly;`</mark> - true - only locked deposits at RealYieldStaking are allowed for collateral; otherwise - false (means that non-locked are also accounted, but locked deposit must be present anyway).\ <mark style="color:orange;">`uint64backingRatio;`</mark> - collateral ratio for desired deposit amount, defines how much KNINE must be locked at Real Yield Staking based on the input amount; the value has a 2 decimals precision (i.e. if you need to set the backing ratio == 2, then the input value for the contract must be 200).\ <mark style="color:orange;">`uint64vesting;`</mark> - reward conversion ratio, defines how much KNINE user will receive based on his deposit; the value has a 2 decimals precision (i.e. if you need to set the vesting ratio == 2, then the input value for the contract must be 200).\ <mark style="color:orange;">`uint64fortressPeriod;`</mark> - vesting duration, seconds.\ <mark style="color:orange;">`}`</mark>\
-\
-<mark style="color:orange;">`struct Deposit {`</mark> \ <mark style="color:orange;">`uint64startTime;`</mark> - deposit vesting start time.\ <mark style="color:orange;">`uint64endTime;`</mark> - vesting end time for the specified deposit.\ <mark style="color:orange;">`uint256 depositAmount;`</mark> - esKNINE deposited amount.\ <mark style="color:orange;">`uint256 reservedAmount;`</mark> - amount of KNINE tokens used as collateral for this deposit.\ <mark style="color:orange;">`uint256 lockedAmount;`</mark> - amount of  locked KNINE deposit at the RealYieldStaking contract.\ <mark style="color:orange;">`uint256 stakedAmount;`</mark> - amount of non-locked KNINE deposit at the RealYieldStaking contract.\ <mark style="color:orange;">`uint256 potentialRewards;`</mark> - the amount of KNINE tokens that the user would receive at the end of vesting.\ <mark style="color:orange;">`uint256 claimed;`</mark> - claimed amount.\ <mark style="color:orange;">`Settings settings;`</mark> - vesting parameters in the Settings struct format.\ <mark style="color:orange;">`Debt debt;`</mark> - how much is in debt (Debt structure).\ <mark style="color:orange;">`}`</mark> - the data is written upon `deposit` and upon `recalculate` method call, if it worked; exception - _claim_ field is kept as current, does not change.
+<mark style="color:orange;">`mapping(address => Deposit) public deposits;`</mark> - mapping, assigning the Deposit struct for each user address.
 
-<mark style="color:orange;">`struct Debt {`</mark>\ <mark style="color:orange;">`uint256 deposited;`</mark> - how much esKNINE is in debt to be claimed.\ <mark style="color:orange;">`uint256 earned;`</mark> - how much KNINE is in debt to be claimed.\ <mark style="color:orange;">`}`</mark>
+<mark style="color:orange;">`struct Settings {`</mark>
+<mark style="color:orange;">`bool lockedOnly;`</mark> - true - only locked deposits at RealYieldStaking are allowed for collateral; otherwise - false (means that non-locked are also accounted, but locked deposit must be present anyway).
+<mark style="color:orange;">`uint64backingRatio;`</mark> - collateral ratio for desired deposit amount, defines how much KNINE must be locked at Real Yield Staking based on the input amount; the value has a 2 decimals precision (i.e. if you need to set the backing ratio == 2, then the input value for the contract must be 200).
+<mark style="color:orange;">`uint64vesting;`</mark> - reward conversion ratio, defines how much KNINE user will receive based on his deposit; the value has a 2 decimals precision (i.e. if you need to set the vesting ratio == 2, then the input value for the contract must be 200).
+<mark style="color:orange;">`uint64fortressPeriod;`</mark> - vesting duration, seconds.
+<mark style="color:orange;">`}`</mark>
+
+<mark style="color:orange;">`struct Deposit {`</mark> 
+<mark style="color:orange;">`uint64startTime;`</mark> - deposit vesting start time.
+<mark style="color:orange;">`uint64endTime;`</mark> - vesting end time for the specified deposit.
+<mark style="color:orange;">`uint256 depositAmount;`</mark> - esKNINE deposited amount.
+<mark style="color:orange;">`uint256 reservedAmount;`</mark> - amount of KNINE tokens used as collateral for this deposit.
+<mark style="color:orange;">`uint256 lockedAmount;`</mark> - amount of  locked KNINE deposit at the RealYieldStaking contract.
+<mark style="color:orange;">`uint256 stakedAmount;`</mark> - amount of non-locked KNINE deposit at the RealYieldStaking contract.
+<mark style="color:orange;">`uint256 potentialRewards;`</mark> - the amount of KNINE tokens that the user would receive at the end of vesting.
+<mark style="color:orange;">`uint256 claimed;`</mark> - claimed amount.
+<mark style="color:orange;">`Settings settings;`</mark> - vesting parameters in the Settings struct format.
+<mark style="color:orange;">`Debt debt;`</mark> - how much is in debt (Debt structure).
+<mark style="color:orange;">`}`</mark> - the data is written upon `deposit` and upon `recalculate` method call, if it worked; exception - _claim_ field is kept as current, does not change.
+
+<mark style="color:orange;">`struct Debt {`</mark>
+<mark style="color:orange;">`uint256 deposited;`</mark> - how much esKNINE is in debt to be claimed.
+<mark style="color:orange;">`uint256 earned;`</mark> - how much KNINE is in debt to be claimed.
+<mark style="color:orange;">`}`</mark>
 
 #### Events
 
-<mark style="color:orange;">`event Deposited(`</mark>\ <mark style="color:orange;">`address user,`</mark>\ <mark style="color:orange;">`uint256 amount,`</mark>\ <mark style="color:orange;">`uint256 potentialReward,`</mark>\ <mark style="color:orange;">`uint64lockEnd`</mark> \ <mark style="color:orange;">`);`</mark> - upon `deposit` call.
+<mark style="color:orange;">`event Deposited(`</mark>
+<mark style="color:orange;">`address user,`</mark>
+<mark style="color:orange;">`uint256 amount,`</mark>
+<mark style="color:orange;">`uint256 potentialReward,`</mark>
+<mark style="color:orange;">`uint64lockEnd`</mark> 
+<mark style="color:orange;">`);`</mark> - upon `deposit` call.
 
 <mark style="color:orange;">`event Claimed(address user,uint256 amount);`</mark> - upon `claim` call, returns:
 
@@ -77,9 +101,10 @@ Settings calldata _settings
 ) public
 ```
 
-{% hint style="info" %}
-For the initializer role only
-{% endhint %}
+
+!!! info
+    For the initializer role only
+
 
 Initializer function, not called after initialization.
 

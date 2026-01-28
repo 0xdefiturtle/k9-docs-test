@@ -28,9 +28,11 @@ The NodeOperatorRegistry contract has the following roles
 
 <mark style="color:orange;">`bytes32 public constant UNPAUSE_ROLE = keccak256("UNPAUSE_ROLE");`</mark> - unpauser role identifier.
 
-<mark style="color:orange;">`bytes32 public constant ADD_NODE_OPERATOR_ROLE =`</mark>\ <mark style="color:orange;">`keccak256("ADD_NODE_OPERATOR_ROLE");`</mark> - role identifier of adding node operator authority
+<mark style="color:orange;">`bytes32 public constant ADD_NODE_OPERATOR_ROLE =`</mark>
+<mark style="color:orange;">`keccak256("ADD_NODE_OPERATOR_ROLE");`</mark> - role identifier of adding node operator authority
 
-<mark style="color:orange;">`bytes32 public constant REMOVE_NODE_OPERATOR_ROLE =`</mark>\ <mark style="color:orange;">`keccak256("REMOVE_NODE_OPERATOR_ROLE");`</mark> - role identifier of removing node operator authority.
+<mark style="color:orange;">`bytes32 public constant REMOVE_NODE_OPERATOR_ROLE =`</mark>
+<mark style="color:orange;">`keccak256("REMOVE_NODE_OPERATOR_ROLE");`</mark> - role identifier of removing node operator authority.
 
 <mark style="color:orange;">`uint256 public DISTANCE_THRESHOLD_PERCENTS;`</mark> - the maximum number (percentage) at which the system considers itself balanced. The distance will be 100 in case where the operator’s minimum stake is equal to the maximum. The distance is calculated as `(max * 100) / min`.
 
@@ -135,22 +137,22 @@ struct ValidatorData {
 
 ## Events
 
-<mark style="color:orange;">`event AddNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - new validator was added to the protocol\
-\
-<mark style="color:orange;">`event RemoveNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - validator was removed from the protocol\
-\
-<mark style="color:orange;">`event RemoveInvalidNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - an invalid validator was removed from the protocol\
-\
-<mark style="color:orange;">`event SetKnBONEAddress(address oldKnBONE, address newKnBONE);`</mark> - KnBONE contract address is set\
-\
-<mark style="color:orange;">`event SetRewardAddress(uint256 validatorId, address oldRewardAddress,address newRewardAddress);`</mark> - rewardAddress is set for the validator\
-\
-<mark style="color:orange;">`event SetDistanceThreshold(uint256 oldDistanceThreshold, uint256 newDistanceThreshold);`</mark>  - DISTANCE\_THRESHOLD\_PERCENTS is set\
-\
-<mark style="color:orange;">`event SetMinRequestWithdrawRange(uint8 oldMinRequestWithdrawRange, uint8 newMinRequestWithdrawRange);`</mark> - MIN\_REQUEST\_WITHDRAW\_RANGE\_PERCENTS is set\
-\
-<mark style="color:orange;">`event SetMaxWithdrawPercentagePerRebalance(uint256 oldMaxWithdrawPercentagePerRebalance, uint256 newMaxWithdrawPercentagePerRebalance);`</mark>  - MAX\_WITHDRAW\_PERCENTAGE\_PER\_REBALANCE is set\
-\
+<mark style="color:orange;">`event AddNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - new validator was added to the protocol
+
+<mark style="color:orange;">`event RemoveNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - validator was removed from the protocol
+
+<mark style="color:orange;">`event RemoveInvalidNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - an invalid validator was removed from the protocol
+
+<mark style="color:orange;">`event SetKnBONEAddress(address oldKnBONE, address newKnBONE);`</mark> - KnBONE contract address is set
+
+<mark style="color:orange;">`event SetRewardAddress(uint256 validatorId, address oldRewardAddress,address newRewardAddress);`</mark> - rewardAddress is set for the validator
+
+<mark style="color:orange;">`event SetDistanceThreshold(uint256 oldDistanceThreshold, uint256 newDistanceThreshold);`</mark>  - DISTANCE\_THRESHOLD\_PERCENTS is set
+
+<mark style="color:orange;">`event SetMinRequestWithdrawRange(uint8 oldMinRequestWithdrawRange, uint8 newMinRequestWithdrawRange);`</mark> - MIN\_REQUEST\_WITHDRAW\_RANGE\_PERCENTS is set
+
+<mark style="color:orange;">`event SetMaxWithdrawPercentagePerRebalance(uint256 oldMaxWithdrawPercentagePerRebalance, uint256 newMaxWithdrawPercentagePerRebalance);`</mark>  - MAX\_WITHDRAW\_PERCENTAGE\_PER\_REBALANCE is set
+
 <mark style="color:orange;">`event ExitNodeOperator(uint256 validatorId, address rewardAddress);`</mark> - the validator removed himself from the protocol
 
 ## View functions <a href="#view-methods" id="view-methods"></a>
@@ -195,13 +197,14 @@ Calculate how _totalBuffered_ should be delegated between the active validators,
 * If the system is **balanced - r**eturns a list of validators with zero&#x73;**.**
 * &#x20;If the system is **not balanced - r**eturns a list of validators, a list of shares and the total amount of shares, how to delegate these shares to validators.
 
-{% hint style="info" %}
-Will return an error if:
 
-* the number of validators on the contract is 0
-* there are no validators with the ACTIVE status and with ValidatorShare.delegation() == TRUE
-* validators with EJECTED or UNSTAKED status are present&#x20;
-{% endhint %}
+!!! info
+    Will return an error if:
+    
+    * the number of validators on the contract is 0
+    * there are no validators with the ACTIVE status and with ValidatorShare.delegation() == TRUE
+    * validators with EJECTED or UNSTAKED status are present&#x20;
+
 
 ### getValidatorsRebalanceAmount
 
@@ -226,15 +229,16 @@ If the system is **not balanced**, it will return
 * the sum of shares
 * the amount to withdraw that corresponds to the sum of shares.&#x20;
 
-{% hint style="info" %}
-Will return an error if:
 
-* the number of validators on the contract is < 2
-* there are no validators with the ACTIVE status and with ValidatorShare.delegation() = TRUE
-* validators with EJECTED or UNSTAKED statuses are present&#x20;
-* the system is balanced&#x20;
-* totalToWithdraw value is 0 (if there is no need to transfer funds between validators to achieve the balanced state).&#x20;
-{% endhint %}
+!!! info
+    Will return an error if:
+    
+    * the number of validators on the contract is < 2
+    * there are no validators with the ACTIVE status and with ValidatorShare.delegation() = TRUE
+    * validators with EJECTED or UNSTAKED statuses are present&#x20;
+    * the system is balanced&#x20;
+    * totalToWithdraw value is 0 (if there is no need to transfer funds between validators to achieve the balanced state).&#x20;
+
 
 ### getValidatorsRequestWithdraw
 
@@ -357,7 +361,6 @@ function initialize(
 Initializer function, not called after initialization.
 
 
-
 ### exitNodeOperatorRegistry[​](https://docs.polygon.lido.fi/contracts/node-operators-registry#exitnodeoperatorregistry) <a href="#exitnodeoperatorregistry" id="exitnodeoperatorregistry"></a>
 
 ```
@@ -389,9 +392,10 @@ Update the reward address of a Node Operator. ONLY Operator owner can call this 
 
 ## Admin Methods <a href="#pasue" id="pasue"></a>
 
-{% hint style="info" %}
-This method can be called by ADMIN-only roles
-{% endhint %}
+
+!!! info
+    This method can be called by ADMIN-only roles
+
 
 ### pause[​](https://docs.polygon.lido.fi/contracts/node-operators-registry#pasue) <a href="#pasue" id="pasue"></a>
 
@@ -411,9 +415,10 @@ Allows an authorized user with `UNPAUSE ROLE` to unpause the NodeOperatorRegistr
 
 ## DAO Methods[​](https://docs.polygon.lido.fi/contracts/node-operators-registry#dao-methods) <a href="#dao-methods" id="dao-methods"></a>
 
-{% hint style="info" %}
-These methods can be called by DAO-only roles.
-{% endhint %}
+
+!!! info
+    These methods can be called by DAO-only roles.
+
 
 ### addNodeOperator <a href="#addnodeoperator" id="addnodeoperator"></a>
 

@@ -1,11 +1,11 @@
----
+﻿---
 description: How to use Real Yield Staking
 ---
 
 # Real Yield Staking
 
-1. Click on "Real Yield Staking" in the left hand menu\
-   ![](<../../.gitbook/assets/image (5).png>)
+1. Click on "Real Yield Staking" in the left hand menu
+![](<../../assets/image (5).png>)
 2.  This interface is for staking KNINE with optional locking to receive rewards. <br>
 
     <figure><img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcmn70ETv5lKzGdBQI7Sfivn1dtgSVwG5LWIeCNybEwTACNI-vz2clwe0itNO1krdP9HIHte02Nt7J-ZaPcFzzzDIt8iZZQwJszB2rIXnvKsNSNeZaVyi0tDV2Vj6JNFFswVgl8fNbF9LQrWzzt2xN0AOMB?key=UHJy3JQkr0xZIlPVeyb1AA" alt=""><figcaption></figcaption></figure>
@@ -35,3 +35,4 @@ Now you can choose from the following options (detailed guides available at link
 * [Stake without Lock](stake-without-lock.md)
 * [Claim Rewards](claim-rewards.md)
 * [Withdraw/Unstake](withdraw.md)
+

@@ -4,13 +4,17 @@ description: Guide on how to use the K9 Finance DAO product on Mainnet
 
 # Mainnet Guide - START HERE
 
-{% embed url="https://storage.googleapis.com/k9-static-hosting/Bonecrusher_Video_Guide.mp4" %}
-Bonecrusher Video Guide
-{% endembed %}
+
+<video controls style="max-width: 100%;" src="https://storage.googleapis.com/k9-static-hosting/Bonecrusher_Video_Guide.mp4"></video>
+
+[Bonecrusher Video Guide](https://storage.googleapis.com/k9-static-hosting/Bonecrusher_Video_Guide.mp4)
+
 
 In order to use the product on mainnet you will need to make sure you configure both the Shibarium and Ethereum networks. The frontend dApp can be accessed at [https://app.k9finance.com](https://app.k9finance.com) and contract addresses can be found [here](../deployed-contracts/).
 
-#### **Step 1 - Add the following 2  networks to your wallet** ([Metamask A](https://support.metamask.io/networks-and-sidechains/managing-networks/how-to-add-a-custom-network-rpc/)[dd Network Guide](https://support.metamask.io/networks-and-sidechains/managing-networks/how-to-add-a-custom-network-rpc/))  &#xNAN;**`Shibarium Mainnet Network Settings`**
+#### **Step 1 - Add the following 2  networks to your wallet** ([Metamask A](https://support.metamask.io/networks-and-sidechains/managing-networks/how-to-add-a-custom-network-rpc/)[dd Network Guide](https://support.metamask.io/networks-and-sidechains/managing-networks/how-to-add-a-custom-network-rpc/))  
+
+**`Shibarium Mainnet Network Settings`**
 
 `Network name: Shibarium Mainnet`
 
@@ -20,9 +24,9 @@ In order to use the product on mainnet you will need to make sure you configure 
 
 `Currency symbol: BONE`
 
-`Block explorer URL (Optional): https://www.shibariumscan.io/`\
-\
-&#xNAN;**`Ethereum Mainnet Network Settings`**
+`Block explorer URL (Optional): https://www.shibariumscan.io/`
+
+**`Ethereum Mainnet Network Settings`**
 
 `Network name: Ethereum Network`
 
@@ -52,5 +56,5 @@ In order to use the product on mainnet you will need to make sure you configure 
 * [Real Yield Staking](real-yield-staking/)
 * [Vesting](vesting.md)<br>
 
-\
+
 <br>

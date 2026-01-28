@@ -1,4 +1,4 @@
-# Liquid Staking
+﻿# Liquid Staking
 
 Shibarium Network, being a proof of stake (PoS) network, has native staking and requires locking BONE on Ethereum.
 
@@ -13,4 +13,5 @@ K9 Finance DAO offers an alternative - Liquid Staking. Here is how it works:
 
 Liquid staking provides the best of both worlds: you contribute to Shibarium network security and earn staking rewards, all while retaining control and flexibility over your BONE through knBONE.
 
-<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption><p>Liquid Staking flow</p></figcaption></figure>
+<figure><img src="../assets/image (27).png" alt=""><figcaption><p>Liquid Staking flow</p></figcaption></figure>
+

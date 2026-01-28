@@ -6,13 +6,13 @@ UnstBONE contract is an ERC721 contract used by the KnBONE contract to manage wi
 
 ## Variables
 
-<mark style="color:orange;">`address public knBONE;`</mark> - knBONE contract address.\
-\
-<mark style="color:orange;">`uint256 public tokenIdIndex;`</mark> - _totalSupply_ value of the contract. Burned NFTs are not taken into account, so it shows how many tokens were minted.\
-\
-<mark style="color:orange;">`mapping(address => uint256[]) public owner2Tokens;`</mark> - for each address returns an array of tokens that this address owns.\
-<mark style="color:orange;">`mapping(uint256 => uint256) public token2Index;`</mark> - for each token returns the index in the _owner2Tokens_ array.\
-<mark style="color:orange;">`mapping(address => uint256[]) public address2Approved;`</mark> - for each address returns an array of tokens that have been approved for this address. Does not take into account approvals via _approvalForAll_.\
+<mark style="color:orange;">`address public knBONE;`</mark> - knBONE contract address.
+
+<mark style="color:orange;">`uint256 public tokenIdIndex;`</mark> - _totalSupply_ value of the contract. Burned NFTs are not taken into account, so it shows how many tokens were minted.
+
+<mark style="color:orange;">`mapping(address => uint256[]) public owner2Tokens;`</mark> - for each address returns an array of tokens that this address owns.
+<mark style="color:orange;">`mapping(uint256 => uint256) public token2Index;`</mark> - for each token returns the index in the _owner2Tokens_ array.
+<mark style="color:orange;">`mapping(address => uint256[]) public address2Approved;`</mark> - for each address returns an array of tokens that have been approved for this address. Does not take into account approvals via _approvalForAll_.
 <mark style="color:orange;">`mapping(uint256 => uint256) public tokenId2ApprovedIndex;`</mark> - for each approved token returns the index in the returned array _address2Approved._
 
 ## Modifiers
@@ -40,9 +40,10 @@ function mint(address _to) external isKnBONE returns (uint256)
 
 Mint new token.
 
-{% hint style="info" %}
-&#x20;tokenID starts from 1, not from 0
-{% endhint %}
+
+!!! info
+    &#x20;tokenID starts from 1, not from 0
+
 
 ### burn
 

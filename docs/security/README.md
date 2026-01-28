@@ -22,7 +22,9 @@ We will consider implementing a bug bounty program. This incentivizes the securi
 
 We understand that security is an ongoing process. K9 DAO remains alert by constantly monitoring our systems and protocols for potential threats. We will adapt and implement additional security measures as the DeFi landscape evolves.
 
-{% hint style="warning" %}
-* While we implement these security measures, it's crucial to remember that DeFi is a nascent industry. Despite best efforts, vulnerabilities can still exist.
-* You should always conduct your own research and due diligence before interacting with any DeFi protocol, including K9 Finance DAO.
-{% endhint %}
+
+!!! warning
+    * While we implement these security measures, it's crucial to remember that DeFi is a nascent industry. Despite best efforts, vulnerabilities can still exist.
+    * You should always conduct your own research and due diligence before interacting with any DeFi protocol, including K9 Finance DAO.
+
+

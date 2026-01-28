@@ -1,0 +1,48 @@
+/* --- Base palette (tweak as needed) --- */
+:root {
+  /* Brand-ish orange used for headings/links */
+  --k9-orange: #EF7C31;
+
+  /* Warm light background */
+  --k9-bg: #F7F2EC;
+
+  /* Dark text */
+  --k9-fg: #1A1A1A;
+}
+
+/* Material CSS variable overrides */
+body {
+  /* Background + subtle grid */
+  background-color: var(--k9-bg);
+
+  /* Grid pattern (subtle) */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+
+  /* Material vars */
+  --md-default-bg-color: var(--k9-bg);
+  --md-default-fg-color: var(--k9-fg);
+}
+
+/* Links + headings */
+.md-typeset a {
+  color: var(--k9-orange);
+}
+.md-typeset a:hover {
+  opacity: 0.85;
+}
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--k9-orange);
+}
+
+/* Code blocks a bit closer to GitBook feel */
+.md-typeset pre > code {
+  border-radius: 12px;
+}
+.md-typeset code {
+  border-radius: 6px;
+}
