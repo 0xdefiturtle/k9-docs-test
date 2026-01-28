@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Overview](index.md)
 * [Administration](administration.md)
 * [How K9 Finance DAO works](how-k9-finance-dao-works.md)
 * [Liquid Staking](liquid-staking/README.md)
