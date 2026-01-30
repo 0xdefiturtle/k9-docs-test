@@ -28,7 +28,7 @@ After completing this operation, you will receive an NFT of your application. Yo
    * You will receive - the amount of BONE that you will receive as a result of executing a withdrawal request, in accordance with the rate in the system.
    * Exchange rate - BONE:knBONE rate in the system.
 4. Click on the Unstake button
-   * If you are connected to the Sepolia network, the system will prompt you to switch to Puppynet. Click on the â€œSwitch to Puppynetâ€ button and confirm the action in your wallet.<br>
+   * If you are connected to the Sepolia network, the system will prompt you to switch to Puppynet. Click on the Switch to Puppynet button and confirm the action in your wallet.<br>
 5. Wait while the system switches to another network and refreshes the page.
 6. Click on the Unstake button.&#x20;
 7. The system will request confirmation to use the amount of knBONE tokens you specified. Popup window displays the transaction progress:
@@ -38,7 +38,7 @@ After completing this operation, you will receive an NFT of your application. Yo
 9. Next, the system will display a window to confirm the operation. During this transaction, your knBONE tokens in Puppynet will be transferred to Sepolia and debited from your wallet.
    * For the transfer of tokens from Puppynet to Sepolia, the system charges a fee to cover the costs of the transaction, the amount is indicated in the Bridging fee field.
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfiLcQAma0SjqZm-e-9kX_87lBbjjMMyR_4sU5FYCza91Vfk1W-nbG4yykwlITqYGtJLYj1_WQepRpe_eHkMwUfYYYJj78Y1ADlJ1ttaIECc1b7vwdzaLVhkCOEKKo1bS_4Qvn9-ntAM13UYz05o3OS0q8?key=UHJy3JQkr0xZIlPVeyb1AA)
-10. Click the â€œConfirmâ€ button and confirm the transaction in your wallet.
+10. Click the Confirm button and confirm the transaction in your wallet.
     * Wait for the transaction to complete. It may take longer than the previous transactions. Popup window displays the transaction progress:
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXedB3KYf1UruYWbDEFQLYV166osXvnUiSzrCaeYoF-PFICaPDATZALuDqvqGV9L1jDRHDVulbYI5RwAKHyFJ2pmi9_A6m5Q1ZYydc8LiMWBWtaHEizBLyQq2-MrmueeY7XZSoLg8jWMdsDQw-KriW5FYxE?key=UHJy3JQkr0xZIlPVeyb1AA)
 11. After completing the operation, a popup with the NFT of your request will be displayed.
@@ -66,7 +66,7 @@ After completing this operation you will receive BONE to your wallet.
    * Reward fee -withdrawal fee for unstaking funds through Instant Withdraw.
    * Exchange rate - BONE:knBONE rate in the system.
 4. Click on the Unstake button
-   * If you are connected to the Sepolia network, the system will prompt you to switch to Puppynet. Click on the â€œSwitch to Puppynetâ€ button and confirm the action in your wallet.<br>
+   * If you are connected to the Sepolia network, the system will prompt you to switch to Puppynet. Click on the Switch to Puppynet button and confirm the action in your wallet.<br>
    * Wait while the system switches to another network and refreshes the page.
    * Click on the Unstake button.&#x20;
 5. The system will request confirmation to use the amount of knBONE tokens you specified. Popup window displays the transaction progress:
@@ -75,7 +75,7 @@ After completing this operation you will receive BONE to your wallet.
 7. Next, the system will display a window to confirm the operation. During this transaction, your knBONE tokens in Puppynet will be transferred to Sepolia and debited from your wallet.
    * For the transfer of tokens from Puppynet to Sepolia, the system charges a fee to cover the costs of the transaction, the amount is indicated in the Bridging fee field.
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXfiLcQAma0SjqZm-e-9kX_87lBbjjMMyR_4sU5FYCza91Vfk1W-nbG4yykwlITqYGtJLYj1_WQepRpe_eHkMwUfYYYJj78Y1ADlJ1ttaIECc1b7vwdzaLVhkCOEKKo1bS_4Qvn9-ntAM13UYz05o3OS0q8?key=UHJy3JQkr0xZIlPVeyb1AA)
-8. Click the â€œConfirmâ€ button and confirm the transaction in your wallet.
+8. Click the Confirm button and confirm the transaction in your wallet.
    * Wait for the transaction to complete. It may take longer than the previous transactions. Popup window displays the transaction progress:
 ![](https://lh7-us.googleusercontent.com/docsz/AD_4nXezxW9YEr-iKFi2Jm0IByZu9MekrNEOcKQcde-wPUAlyX4dpIKnG8Oxrc5EuEzJ-HGwprE06hjGzAjaom5IWGpptH6CuILDeegsXCsCUc5txss0p7TsKhObqHPyT4qwe263Nrn7TiRZtHOExQ9VfcszcyE?key=UHJy3JQkr0xZIlPVeyb1AA)
 9. When the transaction is complete, the popup will display the transaction result:
